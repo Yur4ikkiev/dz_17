@@ -1,11 +1,6 @@
 do {
 var userName = prompt('What is your name?').trim();
-if (userName.includes('@') || userName.includes('1') || 
-    userName.includes('2') || userName.includes('3') || 
-    userName.includes('4') || userName.includes('5') || 
-    userName.includes('6') || userName.includes('7') || 
-    userName.includes('8') || userName.includes('9') || 
-    userName.includes('0') ) {
+if (typeof userName === 'number' || isNaN(userName) === false) {
     alert('not valid your name');
     var check = true; 
 }else {
@@ -15,12 +10,7 @@ if (userName.includes('@') || userName.includes('1') ||
 }
 
 if (check === false) {
-    if (lastName.includes('@') || lastName.includes('1') || 
-        lastName.includes('2') || lastName.includes('3') || 
-        lastName.includes('4') || lastName.includes('5') || 
-        lastName.includes('6') || lastName.includes('7') || 
-        lastName.includes('8') || lastName.includes('9') || 
-        lastName.includes('0') ) {
+    if (typeof lastName === 'number' || isNaN(lastName) === false) {
         alert('not valid your lastname');
         check = true;
     } else {
